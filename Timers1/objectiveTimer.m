@@ -41,6 +41,7 @@
 
 - (void)tick
 {
+    // new tick comment
     NSString *val = self->status;
     if(!self->alive){
         if(self->respawnTimer < 1){
