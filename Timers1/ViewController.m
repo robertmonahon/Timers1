@@ -81,28 +81,13 @@
     globalClock = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(clockTick) userInfo:nil repeats:YES];
     [globalClock fire];
     
-    /*obTimer.text = @"Spawn in 0:55";
-    orTimer.text = @"Spawn in 0:55";
-    tbTimer.text = @"Spawn in 0:55";
-    trTimer.text = @"Spawn in 0:55";
-    dragonTimer.text = @"Spawn in 5:00";
-    baronTimer.text = @"Spawn in 14:00";*/
-    
     startButtonUpdate.enabled = false;
-    /*obButtonUpdate.enabled = true;
-    orButtonUpdate.enabled = true;
-    tbButtonUpdate.enabled = true;
-    trButtonUpdate.enabled = true;
-    dragonButtonUpdate.enabled = true;
-    baronButtonUpdate.enabled = true;
-    endButtonUpdate.enabled = true;*/
     
 }
 
 // [RLM] [NOTE]
-// move the tick down logic into objective timer as a method that returns the string to display
 // move the timers into an array
-// figure out how to put the values into the string in one line
+// figure out how to put the values into the string in one line - mutable vs. immutable
 
 - (void)clockTick
 {
@@ -121,7 +106,18 @@
     baronTimer.text = baron.status;
     
     dragonBar.progress = ((float)dragon.afterKillRespawnTimer-(float)dragon.respawnTimer)/(float)dragon.afterKillRespawnTimer;
+    if(dragonBar.progress > 0.75) {
+        dragonBar.progressTintColor = [UIColor redColor];
+    } else {
+        dragonBar.progressTintColor = [UIColor blueColor];
+    }
+    
     baronBar.progress = ((float)baron.afterKillRespawnTimer-(float)baron.respawnTimer)/(float)baron.afterKillRespawnTimer;
+    if(baronBar.progress > 0.8) {
+        baronBar.progressTintColor = [UIColor redColor];
+    } else {
+        baronBar.progressTintColor = [UIColor blueColor];
+    }
     
 }
 
