@@ -36,6 +36,18 @@
 @synthesize obButtonUpdate;
 
 
+
+- (void)viewDidLoad
+{	  	
+    [super viewDidLoad];
+	  	
+  // Do any additional setup after loading the view, typically from a nib.
+
+    [startButtonUpdate setTitle:@"Start Game (1:00)" forState:UIControlStateNormal];	  	
+    [startButtonUpdate setTitle:@"Game has begun!" forState:UIControlStateDisabled];
+	  	  	
+}
+
 - (void)viewDidUnload
 {
     [self setObTimer:nil];
@@ -88,6 +100,8 @@
 // [RLM] [NOTE]
 // move the timers into an array
 // figure out how to put the values into the string in one line - mutable vs. immutable
+// broadcast the clock tick and have the objective timers listen - possible?
+// getters and setters to make it a proper private class
 
 - (void)clockTick
 {
