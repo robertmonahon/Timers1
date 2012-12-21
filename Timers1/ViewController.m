@@ -93,6 +93,7 @@
     globalClock = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(clockTick) userInfo:nil repeats:YES];
     [globalClock fire];
     
+    // this isn't disabling the button in the simulator
     startButtonUpdate.enabled = false;
     
 }
