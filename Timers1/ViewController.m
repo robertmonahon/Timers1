@@ -10,6 +10,16 @@
 #import "objectiveTimer.h"
 
 @interface ViewController ()
+{
+    NSTimer *globalClock;
+    NSMutableArray *_objects;
+    objectiveTimer *ourBlue;
+    objectiveTimer *ourRed;
+    objectiveTimer *theirBlue;
+    objectiveTimer *theirRed;
+    objectiveTimer *dragon;
+    objectiveTimer *baron;
+}
 
 @end
 
@@ -83,13 +93,29 @@
 
 - (IBAction)startGame:(id)sender {
     
-    ourBlue = [[objectiveTimer alloc] initWithName:@"Our Blue"];
-    ourRed = [[objectiveTimer alloc] initWithName:@"Our Red"];
-    theirBlue = [[objectiveTimer alloc] initWithName:@"Their Blue"];
-    theirRed = [[objectiveTimer alloc] initWithName:@"Their Red"];
-    dragon = [[objectiveTimer alloc] initWithName:@"Dragon"];
-    baron = [[objectiveTimer alloc] initWithName:@"Baron"];
+    if (!_objects) {
+        _objects = [[NSMutableArray alloc] init];
+    }
     
+    ourBlue = [[objectiveTimer alloc] initWithName:@"Our Blue"];
+    [_objects addObject:ourBlue];
+    
+    ourRed = [[objectiveTimer alloc] initWithName:@"Our Red"];
+    [_objects addObject:ourRed];
+    
+    theirBlue = [[objectiveTimer alloc] initWithName:@"Their Blue"];
+    [_objects addObject:theirBlue];
+    
+    theirRed = [[objectiveTimer alloc] initWithName:@"Their Red"];
+    [_objects addObject:theirRed];
+    
+    dragon = [[objectiveTimer alloc] initWithName:@"Dragon"];
+    [_objects addObject:dragon];
+    
+    baron = [[objectiveTimer alloc] initWithName:@"Baron"];
+    [_objects addObject:baron];
+    
+    [globalClock invalidate];
     globalClock = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(clockTick) userInfo:nil repeats:YES];
     [globalClock fire];
     
@@ -102,61 +128,64 @@
 // move the timers into an array
 // figure out how to put the values into the string in one line - mutable vs. immutable
 // broadcast the clock tick and have the objective timers listen - possible?
-// getters and setters to make it a proper private class
 
 - (void)clockTick
 {
-    [ourBlue tick];
-    [ourRed tick];
-    [theirBlue tick];
-    [theirRed tick];
-    [dragon tick];
-    [baron tick];
+    for (objectiveTimer *timer in _objects) {
+        [timer tick];
+    }
+    //[ourBlue tick];
+    //[ourRed tick];
+    //[theirBlue tick];
+    //[theirRed tick];
+    //[dragon tick];
+    //[baron tick];
     
-    obTimer.text = ourBlue.status;
-    orTimer.text = ourRed.status;
-    tbTimer.text = theirBlue.status;
-    trTimer.text = theirRed.status;
-    dragonTimer.text = dragon.status;
-    baronTimer.text = baron.status;
+    obTimer.text = [ourBlue getStatus];
+    orTimer.text = [ourRed getStatus];
+    tbTimer.text = [theirBlue getStatus];
+    trTimer.text = [theirRed getStatus];
+    dragonTimer.text = [dragon getStatus];
+    baronTimer.text = [baron getStatus];
+
     
     
-    obBar.progress = ((float)ourBlue.afterKillRespawnTimer-(float)ourBlue.respawnTimer)/(float)ourBlue.afterKillRespawnTimer;
+    obBar.progress = ((float)[ourBlue getResetTimer]-(float)[ourBlue getCurrentTimer])/(float)[ourBlue getResetTimer];
     if(obBar.progress > 0.75) {
         obBar.progressTintColor = [UIColor redColor];
     } else {
         obBar.progressTintColor = [UIColor blueColor];
     }
     
-    tbBar.progress = ((float)theirBlue.afterKillRespawnTimer-(float)theirBlue.respawnTimer)/(float)theirBlue.afterKillRespawnTimer;
+    tbBar.progress = ((float)[theirBlue getResetTimer]-(float)[theirBlue getCurrentTimer])/(float)[theirBlue getResetTimer];
     if(tbBar.progress > 0.75) {
         tbBar.progressTintColor = [UIColor redColor];
     } else {
         tbBar.progressTintColor = [UIColor blueColor];
     }
     
-    orBar.progress = ((float)ourRed.afterKillRespawnTimer-(float)ourRed.respawnTimer)/(float)ourRed.afterKillRespawnTimer;
+    orBar.progress = ((float)[ourRed getResetTimer]-(float)[ourRed getCurrentTimer])/(float)[ourRed getResetTimer];
     if(orBar.progress > 0.75) {
         orBar.progressTintColor = [UIColor redColor];
     } else {
         orBar.progressTintColor = [UIColor blueColor];
     }
     
-    trBar.progress = ((float)theirRed.afterKillRespawnTimer-(float)theirRed.respawnTimer)/(float)theirRed.afterKillRespawnTimer;
+    trBar.progress = ((float)[theirRed getResetTimer]-(float)[theirRed getCurrentTimer])/(float)[theirRed getResetTimer];
     if(trBar.progress > 0.75) {
         trBar.progressTintColor = [UIColor redColor];
     } else {
         trBar.progressTintColor = [UIColor blueColor];
     }
     
-    dragonBar.progress = ((float)dragon.afterKillRespawnTimer-(float)dragon.respawnTimer)/(float)dragon.afterKillRespawnTimer;
+    dragonBar.progress = ((float)[dragon getResetTimer]-(float)[dragon getCurrentTimer])/(float)[dragon getResetTimer];
     if(dragonBar.progress > 0.75) {
         dragonBar.progressTintColor = [UIColor redColor];
     } else {
         dragonBar.progressTintColor = [UIColor blueColor];
     }
     
-    baronBar.progress = ((float)baron.afterKillRespawnTimer-(float)baron.respawnTimer)/(float)baron.afterKillRespawnTimer;
+    baronBar.progress = ((float)[baron getResetTimer]-(float)[baron getCurrentTimer])/(float)[baron getResetTimer];
     if(baronBar.progress > 0.8) {
         baronBar.progressTintColor = [UIColor redColor];
     } else {

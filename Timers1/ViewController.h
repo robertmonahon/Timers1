@@ -10,15 +10,6 @@
 #import "objectiveTimer.h"
 
 @interface ViewController : UIViewController
-{
-    NSTimer *globalClock;
-    objectiveTimer *ourBlue;
-    objectiveTimer *ourRed;
-    objectiveTimer *theirBlue;
-    objectiveTimer *theirRed;
-    objectiveTimer *dragon;
-    objectiveTimer *baron;
-}
 
 - (IBAction)startGame:(id)sender;
 
