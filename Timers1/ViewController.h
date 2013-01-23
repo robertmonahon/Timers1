@@ -50,6 +50,7 @@
 
 
 - (void)clockTick;
+- (void)progressHelper:(UIProgressView *)bar withTimer:(objectiveTimer *)timer;
 
 
 
