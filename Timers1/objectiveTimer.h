@@ -20,6 +20,7 @@
 - (id)initWithName:(NSString *)objectiveName;
 - (void)tick;
 - (void)kill;
+- (void)untick;
 
 - (NSString *)getName;
 - (NSString *)getStatus;

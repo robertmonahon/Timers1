@@ -109,6 +109,12 @@
     [self setTbBar:nil];
     [self setOrBar:nil];
     [self setTrBar:nil];
+    [self setObBorder:nil];
+    [self setTbBorder:nil];
+    [self setOrBorder:nil];
+    [self setTrBorder:nil];
+    [self setDragonBorder:nil];
+    [self setBaronBorder:nil];
     [super viewDidUnload];
     
     // Release any retained subviews of the main view.
@@ -155,36 +161,139 @@
     
 }
 
-- (IBAction)obStart:(id)sender {
-    
+- (IBAction)obStart:(id)sender {    
     [ourBlue kill];
-    
+}
+
+- (IBAction)obTick:(id)sender {
+    if([ourBlue getAlive]) {   //First Check if is Alive
+        [ourBlue kill];        //If So Kill It on Click
+    } else {
+        [ourBlue tick];      //Else UnTick
+        [obTimer setText:[ourBlue getStatus]];  //Quick Refresh of Number
+    }
+}
+
+- (IBAction)obUnTick:(id)sender {
+    if([ourBlue getAlive]) {   //First Check if is Alive
+        [ourBlue kill];        //If So Kill It on Click
+    } else {
+        [ourBlue untick];      //Else UnTick
+        [obTimer setText:[ourBlue getStatus]];  //Quick Refresh of Number
+    }
 }
 - (IBAction)orStart:(id)sender {
     
     [ourRed kill];
     
 }
+
+- (IBAction)orTick:(id)sender {
+    if([ourRed getAlive]) {   //First Check if is Alive
+        [ourRed kill];        //If So Kill It on Click
+    } else {
+        [ourRed tick];      //Else UnTick
+        [orTimer setText:[ourRed getStatus]];  //Quick Refresh of Number
+    }
+}
+
+- (IBAction)orUnTick:(id)sender {
+    if([ourRed getAlive]) {   //First Check if is Alive
+        [ourRed kill];        //If So Kill It on Click
+    } else {
+        [ourRed untick];      //Else UnTick
+        [orTimer setText:[ourRed getStatus]];  //Quick Refresh of Number
+    }
+}
+
 - (IBAction)tbStart:(id)sender {
-    
     [theirBlue kill];
-    
 }
+
+- (IBAction)tbTick:(id)sender {
+    if([theirBlue getAlive]) {   //First Check if is Alive
+        [theirBlue kill];        //If So Kill It on Click
+    } else {
+        [theirBlue tick];      //Else UnTick
+        [tbTimer setText:[theirBlue getStatus]];  //Quick Refresh of Number
+    }
+}
+
+- (IBAction)tbUnTick:(id)sender {
+    if([theirBlue getAlive]) {   //First Check if is Alive
+        [theirBlue kill];        //If So Kill It on Click
+    } else {
+        [theirBlue untick];      //Else UnTick
+        [tbTimer setText:[theirBlue getStatus]];  //Quick Refresh of Number
+    }
+}
+
 - (IBAction)trStart:(id)sender {
-    
     [theirRed kill];
-    
 }
+
+- (IBAction)trTick:(id)sender {
+    if([theirRed getAlive]) {   //First Check if is Alive
+        [theirRed kill];        //If So Kill It on Click
+    } else {
+        [theirRed tick];      //Else UnTick
+        [trTimer setText:[theirRed getStatus]];  //Quick Refresh of Number
+    }
+}
+
+- (IBAction)trUnTick:(id)sender {
+    if([theirRed getAlive]) {   //First Check if is Alive
+        [theirRed kill];        //If So Kill It on Click
+    } else {
+        [theirRed untick];      //Else UnTick
+        [trTimer setText:[theirRed getStatus]];  //Quick Refresh of Number
+    }
+}
+
 - (IBAction)dragonStart:(id)sender {
-    
     [dragon kill];
-    
 }
+
+- (IBAction)dragonTick:(id)sender {
+    if([dragon getAlive]) {   //First Check if is Alive
+        [dragon kill];        //If So Kill It on Click
+    } else {
+        [dragon tick];      //Else UnTick
+        [dragonTimer setText:[dragon getStatus]];  //Quick Refresh of Number
+    }
+}
+
+- (IBAction)dragonUnTick:(id)sender {
+    if([dragon getAlive]) {   //First Check if is Alive
+        [dragon kill];        //If So Kill It on Click
+    } else {
+        [dragon untick];      //Else UnTick
+        [dragonTimer setText:[dragon getStatus]];  //Quick Refresh of Number
+    }
+}
+
 - (IBAction)baronStart:(id)sender {
-    
     [baron kill];
-    
 }
+
+- (IBAction)baronUnTick:(id)sender {
+    if([baron getAlive]) {   //First Check if is Alive
+        [baron kill];        //If So Kill It on Click
+    } else {
+        [baron untick];      //Else UnTick
+        [baronTimer setText:[baron getStatus]];  //Quick Refresh of Number
+    }
+}
+
+- (IBAction)baronTick:(id)sender {
+    if([baron getAlive]) {   //First Check if is Alive
+        [baron kill];        //If So Kill It on Click
+    } else {
+        [baron tick];      //Else UnTick
+        [baronTimer setText:[baron getStatus]];  //Quick Refresh of Number
+    }
+}
+
 - (IBAction)endGame:(id)sender {
     
     startButtonUpdate.enabled = true;

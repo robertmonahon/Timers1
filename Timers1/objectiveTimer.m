@@ -23,8 +23,8 @@
             self->respawnTimer = 300;
             self->afterKillRespawnTimer = 360;
         } else if (objectiveName == @"Baron") {
-            self->respawnTimer = 840;
-            self->afterKillRespawnTimer = 420;
+            self->respawnTimer = 20;//840;
+            self->afterKillRespawnTimer = 25;//420;
         } else {
             self->respawnTimer = 0;
             self->afterKillRespawnTimer = 0;
@@ -47,6 +47,22 @@
             val = @"ALIVE!";
         } else {
             self->respawnTimer--;
+            val = [NSString stringWithFormat:@"%i:%i",[self getCurrentTimer]/60,[self getCurrentTimer]%60];
+        }
+    }
+    self->status = val;
+}
+
+- (void)untick
+{
+    // new
+    NSString *val = self->status;
+    if(!self->alive){
+        if(self->respawnTimer < 1){
+            self->alive = true;
+            val = @"ALIVE!";
+        } else {
+            self->respawnTimer++;
             val = [NSString stringWithFormat:@"%i:%i",[self getCurrentTimer]/60,[self getCurrentTimer]%60];
         }
     }
