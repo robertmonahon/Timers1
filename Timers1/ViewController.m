@@ -56,9 +56,6 @@
 	  	
   // Do any additional setup after loading the view, typically from a nib.
 
-    [startButtonUpdate setTitle:@"Start Game (1:00)" forState:UIControlStateNormal];	  	
-    [startButtonUpdate setTitle:@"Game has begun!" forState:UIControlStateDisabled];
-    
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
@@ -149,28 +146,13 @@
         [[_timerLabels objectAtIndex:i] setText:[[_objects objectAtIndex:i] getStatus]];
     }
     
-    int dragon_progress = ((float)dragon.afterKillRespawnTimer-(float)dragon.respawnTimer)/(float)dragon.afterKillRespawnTimer;
-    if(dragon_progress > 0.75){
-        dragonButtonUpdate.backgroundColor = [UIColor redColor];
-    } else {
-        dragonButtonUpdate.backgroundColor = [UIColor blueColor];
-    }
+    //dragonBar.progress = ((float)dragon.afterKillRespawnTimer-(float)dragon.respawnTimer)/(float)dragon.afterKillRespawnTimer;
+    //if(dragonBar.progress > 0.75) {
+    //    dragonBar.progressTintColor = [UIColor redColor];
+    //} else {
+    //    dragonBar.progressTintColor = [UIColor blueColor];
+    //}
     
-    dragonBar.progress = ((float)dragon.afterKillRespawnTimer-(float)dragon.respawnTimer)/(float)dragon.afterKillRespawnTimer;
-    if(dragonBar.progress > 0.75) {
-        dragonBar.progressTintColor = [UIColor redColor];
-    } else {
-        dragonBar.progressTintColor = [UIColor blueColor];
-    }
-    
-    baronBar.progress = ((float)baron.afterKillRespawnTimer-(float)baron.respawnTimer)/(float)baron.afterKillRespawnTimer;
-    if(baronBar.progress > 0.75) {
-        baronBar.progressTintColor = [UIColor redColor];
-        baronButtonUpdate.backgroundColor = [UIColor redColor];
-    } else {
-        baronBar.progressTintColor = [UIColor blueColor];
-        baronButtonUpdate.backgroundColor = [UIColor blueColor];
-    }
 }
 
 - (IBAction)obStart:(id)sender {
