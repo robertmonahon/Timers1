@@ -10,6 +10,19 @@
 #import "objectiveTimer.h"
 
 @interface ViewController ()
+{
+    NSTimer *globalClock;
+    NSMutableArray *_objects;
+    NSMutableArray *_timerLabels;
+    NSMutableArray *_timerBars;
+    int timerCount;
+    objectiveTimer *ourBlue;
+    objectiveTimer *ourRed;
+    objectiveTimer *theirBlue;
+    objectiveTimer *theirRed;
+    objectiveTimer *dragon;
+    objectiveTimer *baron;
+}
 
 @end
 
@@ -35,6 +48,46 @@
 @synthesize obTimer;
 @synthesize obButtonUpdate;
 
+
+
+- (void)viewDidLoad
+{	  	
+    [super viewDidLoad];
+	  	
+  // Do any additional setup after loading the view, typically from a nib.
+
+    [startButtonUpdate setTitle:@"Start Game (1:00)" forState:UIControlStateNormal];	  	
+    [startButtonUpdate setTitle:@"Game has begun!" forState:UIControlStateDisabled];
+    
+    if (!_objects) {
+        _objects = [[NSMutableArray alloc] init];
+    }
+    
+    ourBlue = [[objectiveTimer alloc] initWithName:@"Our Blue"];
+    [_objects addObject:ourBlue];
+    
+    ourRed = [[objectiveTimer alloc] initWithName:@"Our Red"];
+    [_objects addObject:ourRed];
+    
+    theirBlue = [[objectiveTimer alloc] initWithName:@"Their Blue"];
+    [_objects addObject:theirBlue];
+    
+    theirRed = [[objectiveTimer alloc] initWithName:@"Their Red"];
+    [_objects addObject:theirRed];
+    
+    dragon = [[objectiveTimer alloc] initWithName:@"Dragon"];
+    [_objects addObject:dragon];
+    
+    baron = [[objectiveTimer alloc] initWithName:@"Baron"];
+    [_objects addObject:baron];
+    
+    _timerLabels = [NSMutableArray arrayWithObjects:obTimer, orTimer, tbTimer, trTimer, dragonTimer, baronTimer, nil];
+    
+    _timerBars = [NSMutableArray arrayWithObjects:obBar, orBar, tbBar, trBar, dragonBar, baronBar, nil];
+    
+    timerCount = 6;
+	  	  	
+}
 
 - (void)viewDidUnload
 {
@@ -71,16 +124,12 @@
 
 - (IBAction)startGame:(id)sender {
     
-    ourBlue = [[objectiveTimer alloc] initWithName:@"Our Blue"];
-    ourRed = [[objectiveTimer alloc] initWithName:@"Our Red"];
-    theirBlue = [[objectiveTimer alloc] initWithName:@"Their Blue"];
-    theirRed = [[objectiveTimer alloc] initWithName:@"Their Red"];
-    dragon = [[objectiveTimer alloc] initWithName:@"Dragon"];
-    baron = [[objectiveTimer alloc] initWithName:@"Baron"];
     
+    [globalClock invalidate];
     globalClock = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(clockTick) userInfo:nil repeats:YES];
     [globalClock fire];
     
+    // this isn't disabling the button in the simulator
     startButtonUpdate.enabled = false;
     
 }
@@ -88,50 +137,16 @@
 // [RLM] [NOTE]
 // move the timers into an array
 // figure out how to put the values into the string in one line - mutable vs. immutable
+// broadcast the clock tick and have the objective timers listen - possible?
 
 - (void)clockTick
 {
-    [ourBlue tick];
-    [ourRed tick];
-    [theirBlue tick];
-    [theirRed tick];
-    [dragon tick];
-    [baron tick];
-    
-    obTimer.text = ourBlue.status;
-    orTimer.text = ourRed.status;
-    tbTimer.text = theirBlue.status;
-    trTimer.text = theirRed.status;
-    dragonTimer.text = dragon.status;
-    baronTimer.text = baron.status;
-    
-    
-    obBar.progress = ((float)ourBlue.afterKillRespawnTimer-(float)ourBlue.respawnTimer)/(float)ourBlue.afterKillRespawnTimer;
-    if(obBar.progress > 0.75) {
-        obBar.progressTintColor = [UIColor redColor];
-    } else {
-        obBar.progressTintColor = [UIColor blueColor];
+    for (objectiveTimer *timer in _objects) {
+        [timer tick];
     }
     
-    tbBar.progress = ((float)theirBlue.afterKillRespawnTimer-(float)theirBlue.respawnTimer)/(float)theirBlue.afterKillRespawnTimer;
-    if(tbBar.progress > 0.75) {
-        tbBar.progressTintColor = [UIColor redColor];
-    } else {
-        tbBar.progressTintColor = [UIColor blueColor];
-    }
-    
-    orBar.progress = ((float)ourRed.afterKillRespawnTimer-(float)ourRed.respawnTimer)/(float)ourRed.afterKillRespawnTimer;
-    if(orBar.progress > 0.75) {
-        orBar.progressTintColor = [UIColor redColor];
-    } else {
-        orBar.progressTintColor = [UIColor blueColor];
-    }
-    
-    trBar.progress = ((float)theirRed.afterKillRespawnTimer-(float)theirRed.respawnTimer)/(float)theirRed.afterKillRespawnTimer;
-    if(trBar.progress > 0.75) {
-        trBar.progressTintColor = [UIColor redColor];
-    } else {
-        trBar.progressTintColor = [UIColor blueColor];
+    for (int i = 0; i < timerCount; i++) {
+        [[_timerLabels objectAtIndex:i] setText:[[_objects objectAtIndex:i] getStatus]];
     }
     
     int dragon_progress = ((float)dragon.afterKillRespawnTimer-(float)dragon.respawnTimer)/(float)dragon.afterKillRespawnTimer;
@@ -215,4 +230,16 @@
     [globalClock invalidate];
     
 }
+
+- (void)progressHelper:(UIProgressView *)bar withTimer:(objectiveTimer *)timer {
+    
+    [bar setProgress:((float)[timer getResetTimer]-(float)[timer getCurrentTimer])/(float)[timer getResetTimer]];
+    
+    if([bar progress] > 0.8) {
+        [bar setProgressTintColor:[UIColor redColor]];
+    } else {
+        [bar setProgressTintColor:[UIColor blueColor]];
+    }
+}
+
 @end

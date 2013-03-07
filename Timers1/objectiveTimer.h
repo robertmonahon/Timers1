@@ -17,15 +17,21 @@
     int afterKillRespawnTimer;
 }
 
-@property NSString *name;
-@property NSString *status;
-@property int respawnTimer;
-@property bool alive;
-@property int afterKillRespawnTimer;
-
 - (id)initWithName:(NSString *)objectiveName;
 - (void)tick;
 - (void)kill;
+
+- (NSString *)getName;
+- (NSString *)getStatus;
+- (int)getCurrentTimer;
+- (bool)getAlive;
+- (int)getResetTimer;
+
+- (void)setName:(NSString *)nameToSet;
+- (void)setStatus:(NSString *)statusToSet;
+- (void)setRespawnTimer:(int)respawnTimerToSet;
+- (void)setAlive:(bool)aliveToSet;
+- (void)setAfterKillRespawnTimer:(int)afterKillRespawnTimerToSet;
 
 
 @end

@@ -10,8 +10,6 @@
 
 @implementation objectiveTimer
 
-@synthesize respawnTimer, alive, name, status, afterKillRespawnTimer;
-
 - (id)initWithName:(NSString *)objectiveName
 {
     self = [super init];
@@ -22,11 +20,11 @@
             self->respawnTimer = 55;
             self->afterKillRespawnTimer = 300;
         } else if (objectiveName == @"Dragon") {
-            self->respawnTimer = 10;
-            self->afterKillRespawnTimer = 20;
+            self->respawnTimer = 300;
+            self->afterKillRespawnTimer = 360;
         } else if (objectiveName == @"Baron") {
-            self->respawnTimer = 20;
-            self->afterKillRespawnTimer = 25;
+            self->respawnTimer = 840;
+            self->afterKillRespawnTimer = 420;
         } else {
             self->respawnTimer = 0;
             self->afterKillRespawnTimer = 0;
@@ -49,7 +47,7 @@
             val = @"ALIVE!";
         } else {
             self->respawnTimer--;
-            val = [NSString stringWithFormat:@"%i:%i",self.respawnTimer/60,self.respawnTimer%60];
+            val = [NSString stringWithFormat:@"%i:%i",[self getCurrentTimer]/60,[self getCurrentTimer]%60];
         }
     }
     self->status = val;
@@ -61,6 +59,46 @@
         self->alive = false;
         self->respawnTimer = self->afterKillRespawnTimer;
     }
+}
+
+- (NSString *)getName{
+    return self->name;
+}
+
+- (NSString *)getStatus{
+    return self->status;
+}
+
+- (int)getCurrentTimer{
+    return self->respawnTimer;
+}
+
+- (bool)getAlive{
+    return self->alive;
+}
+
+- (int)getResetTimer{
+    return self->afterKillRespawnTimer;
+}
+
+- (void)setName:(NSString *)nameToSet{
+    self->name = nameToSet;
+}
+
+- (void)setStatus:(NSString *)statusToSet{
+    self->status = statusToSet;
+}
+
+- (void)setRespawnTimer:(int)respawnTimerToSet{
+    self->respawnTimer = respawnTimerToSet;
+}
+
+- (void)setAlive:(bool)aliveToSet{
+    self->alive = aliveToSet;
+}
+
+- (void)setAfterKillRespawnTimer:(int)afterKillRespawnTimerToSet{
+    self->afterKillRespawnTimer = afterKillRespawnTimerToSet;
 }
 
 @end
