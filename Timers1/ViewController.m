@@ -134,6 +134,13 @@
         trBar.progressTintColor = [UIColor blueColor];
     }
     
+    int dragon_progress = ((float)dragon.afterKillRespawnTimer-(float)dragon.respawnTimer)/(float)dragon.afterKillRespawnTimer;
+    if(dragon_progress > 0.75){
+        dragonButtonUpdate.backgroundColor = [UIColor redColor];
+    } else {
+        dragonButtonUpdate.backgroundColor = [UIColor blueColor];
+    }
+    
     dragonBar.progress = ((float)dragon.afterKillRespawnTimer-(float)dragon.respawnTimer)/(float)dragon.afterKillRespawnTimer;
     if(dragonBar.progress > 0.75) {
         dragonBar.progressTintColor = [UIColor redColor];
@@ -142,10 +149,12 @@
     }
     
     baronBar.progress = ((float)baron.afterKillRespawnTimer-(float)baron.respawnTimer)/(float)baron.afterKillRespawnTimer;
-    if(baronBar.progress > 0.8) {
+    if(baronBar.progress > 0.75) {
         baronBar.progressTintColor = [UIColor redColor];
+        baronButtonUpdate.backgroundColor = [UIColor redColor];
     } else {
         baronBar.progressTintColor = [UIColor blueColor];
+        baronButtonUpdate.backgroundColor = [UIColor blueColor];
     }
 }
 

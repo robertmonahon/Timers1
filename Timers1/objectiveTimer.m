@@ -19,8 +19,8 @@
         self->name = objectiveName;
         self->alive = false;
         if(objectiveName == @"Our Blue" || objectiveName == @"Our Red" || objectiveName == @"Their Blue" || objectiveName == @"Their Red"){
-            self->respawnTimer = 5;
-            self->afterKillRespawnTimer = 15;
+            self->respawnTimer = 55;
+            self->afterKillRespawnTimer = 300;
         } else if (objectiveName == @"Dragon") {
             self->respawnTimer = 10;
             self->afterKillRespawnTimer = 20;

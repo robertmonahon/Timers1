@@ -53,9 +53,8 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *baronBar;
 
 - (IBAction)endGame:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *endButtonUpdate;
-@property (weak, nonatomic) IBOutlet UIButton *startButtonUpdate;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *endButtonUpdate;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *startButtonUpdate;
 
 
 - (void)clockTick;
