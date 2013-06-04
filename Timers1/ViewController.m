@@ -61,6 +61,19 @@
         _objects = [[NSMutableArray alloc] init];
     }
     
+    obTimer.text = @"1:55";
+    orTimer.text = @"1:55";
+    tbTimer.text = @"1:55";
+    trTimer.text = @"1:55";
+    dragonTimer.text = @"6:00";
+    baronTimer.text = @"15:00";
+    obBar.progress = 0;
+    tbBar.progress = 0;
+    orBar.progress = 0;
+    trBar.progress = 0;
+    dragonBar.progress = 0;
+    baronBar.progress = 0;
+    
     ourBlue = [[objectiveTimer alloc] initWithName:@"Our Blue"];
     [_objects addObject:ourBlue];
     
@@ -153,12 +166,9 @@
         [[_timerLabels objectAtIndex:i] setText:[[_objects objectAtIndex:i] getStatus]];
     }
     
-    //dragonBar.progress = ((float)dragon.afterKillRespawnTimer-(float)dragon.respawnTimer)/(float)dragon.afterKillRespawnTimer;
-    //if(dragonBar.progress > 0.75) {
-    //    dragonBar.progressTintColor = [UIColor redColor];
-    //} else {
-    //    dragonBar.progressTintColor = [UIColor darkGrayColor];
-    //}
+    for (int i = 0; i < timerCount; i++) {
+        [self progressHelper:[_timerBars objectAtIndex:i] withTimer:[_objects objectAtIndex:i]];
+    }
     
 }
 
@@ -298,20 +308,20 @@
 - (IBAction)endGame:(id)sender {
     
     startButtonUpdate.enabled = true;
-    /*obButtonUpdate.enabled = false;
+    obButtonUpdate.enabled = false;
     orButtonUpdate.enabled = false;
     tbButtonUpdate.enabled = false;
     trButtonUpdate.enabled = false;
     dragonButtonUpdate.enabled = false;
     baronButtonUpdate.enabled = false;
-    endButtonUpdate.enabled = false;*/
+    endButtonUpdate.enabled = false;
     
-    obTimer.text = @"Spawn at 1:55";
-    orTimer.text = @"Spawn at 1:55";
-    tbTimer.text = @"Spawn at 1:55";
-    trTimer.text = @"Spawn at 1:55";
-    dragonTimer.text = @"Spawn at 6:00";
-    baronTimer.text = @"Spawn at 15:00";
+    obTimer.text = @"1:55";
+    orTimer.text = @"1:55";
+    tbTimer.text = @"1:55";
+    trTimer.text = @"1:55";
+    dragonTimer.text = @"6:00";
+    baronTimer.text = @"15:00";
     obBar.progress = 0;
     tbBar.progress = 0;
     orBar.progress = 0;
@@ -327,10 +337,10 @@
     
     [bar setProgress:((float)[timer getResetTimer]-(float)[timer getCurrentTimer])/(float)[timer getResetTimer]];
     
-    if([bar progress] > 0.8) {
+    if((float)[timer getCurrentTimer] <= 10) {
         [bar setProgressTintColor:[UIColor redColor]];
     } else {
-        [bar setProgressTintColor:[UIColor blueColor]];
+        [bar setProgressTintColor:[UIColor darkGrayColor]];
     }
 }
 
