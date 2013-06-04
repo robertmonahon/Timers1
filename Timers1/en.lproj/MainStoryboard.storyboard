@@ -1,221 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="30E-7n-RTb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="30E-7n-RTb">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="5">
-            <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Timers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="KRm-f0-Nfe">
-                                <rect key="frame" x="32" y="65" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aaW-38-2gh">
-                                <rect key="frame" x="22" y="94" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="OB">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="obStart:" destination="2" eventType="touchUpInside" id="45T-Wx-7pr"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Spawn at 1:55" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xm3-I0-xIV" userLabel="OB Timer">
-                                <rect key="frame" x="158" y="102" width="110" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bfH-Ne-ucu">
-                                <rect key="frame" x="22" y="139" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="OR">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="orStart:" destination="2" eventType="touchUpInside" id="C7d-DJ-dxS"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Spawn at 1:55" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="A5j-NX-nCF" userLabel="OR Timer">
-                                <rect key="frame" x="158" y="146" width="110" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RKr-X6-QVy">
-                                <rect key="frame" x="22" y="184" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="TB">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tbStart:" destination="2" eventType="touchUpInside" id="GlO-bj-nsR"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Spawn at 1:55" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="WKI-Jk-BwN" userLabel="TB Timer">
-                                <rect key="frame" x="158" y="191" width="110" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bUl-nw-Mqn">
-                                <rect key="frame" x="22" y="229" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="TR">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="trStart:" destination="2" eventType="touchUpInside" id="NrT-mY-76J"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Spawn at 1:55" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="cYu-3Q-GBZ" userLabel="TR Timer">
-                                <rect key="frame" x="158" y="236" width="110" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HWY-SQ-06I">
-                                <rect key="frame" x="20" y="279" width="77" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Dragon">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="dragonStart:" destination="2" eventType="touchUpInside" id="wKD-SZ-U3f"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Spawn at 6:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="AeV-nj-6vK" userLabel="Dragon Timer">
-                                <rect key="frame" x="158" y="286" width="110" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mLd-Df-0Oz">
-                                <rect key="frame" x="22" y="348" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Baron">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="baronStart:" destination="2" eventType="touchUpInside" id="72i-0K-meS"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Spawn at 15:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QEV-tU-fcL" userLabel="Baron Timer">
-                                <rect key="frame" x="158" y="355" width="120" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BOC-QW-xdN">
-                                <rect key="frame" x="86" y="20" width="149" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Start Game (1:00)">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startGame:" destination="2" eventType="touchUpInside" id="7cy-mT-afT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WQ0-d4-TTw">
-                                <rect key="frame" x="111" y="413" width="99" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="End Game">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="endGame:" destination="2" eventType="touchUpInside" id="bxs-Gq-u6z"/>
-                                </connections>
-                            </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="KIW-2i-ShT">
-                                <rect key="frame" x="73" y="324" width="150" height="9"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="UM6-YI-oKg">
-                                <rect key="frame" x="73" y="393" width="150" height="9"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="baronBar" destination="UM6-YI-oKg" id="Hw7-uy-zEa"/>
-                        <outlet property="baronButtonUpdate" destination="3" id="eFR-sR-CaX"/>
-                        <outlet property="baronTimer" destination="QEV-tU-fcL" id="1Pt-v6-Gey"/>
-                        <outlet property="dragonBar" destination="KIW-2i-ShT" id="jfo-sV-OGE"/>
-                        <outlet property="dragonButtonUpdate" destination="3" id="Pma-cA-tfm"/>
-                        <outlet property="dragonTimer" destination="AeV-nj-6vK" id="Yf8-FO-mVG"/>
-                        <outlet property="endButtonUpdate" destination="3" id="jDP-5Z-gB2"/>
-                        <outlet property="obButtonUpdate" destination="3" id="1uf-XB-2Te"/>
-                        <outlet property="obTimer" destination="xm3-I0-xIV" id="Tqp-ma-mha"/>
-                        <outlet property="orButtonUpdate" destination="3" id="u9I-42-IGL"/>
-                        <outlet property="orTimer" destination="A5j-NX-nCF" id="2mT-bc-Dvl"/>
-                        <outlet property="startButtonUpdate" destination="BOC-QW-xdN" id="hRb-Og-VGJ"/>
-                        <outlet property="tbButtonUpdate" destination="3" id="OJl-oV-wWu"/>
-                        <outlet property="tbTimer" destination="WKI-Jk-BwN" id="IFf-6W-i9P"/>
-                        <outlet property="trButtonUpdate" destination="3" id="gPT-12-aQd"/>
-                        <outlet property="trTimer" destination="cYu-3Q-GBZ" id="Maa-mp-lGv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-358" y="-349"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="Cd8-SI-354">
             <objects>
@@ -229,7 +18,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zjy-U2-b4o">
-                                        <rect key="frame" x="169" y="48" width="138" height="103"/>
+                                        <rect key="frame" x="164" y="43" width="143" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.25793472501350462" green="0.4051625330228838" blue="0.77543048469387754" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -242,7 +31,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JRv-bD-cVo">
-                                        <rect key="frame" x="16" y="48" width="138" height="103"/>
+                                        <rect key="frame" x="11" y="43" width="143" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.25793472499999998" green="0.40516253299999999" blue="0.77543048469999998" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -255,7 +44,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hEL-YV-VhS">
-                                        <rect key="frame" x="169" y="170" width="138" height="103"/>
+                                        <rect key="frame" x="164" y="165" width="143" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.68869579081632648" green="0.33286846711077256" blue="0.29543970908373712" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -268,7 +57,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xnh-j8-run">
-                                        <rect key="frame" x="167" y="294" width="138" height="103"/>
+                                        <rect key="frame" x="164" y="289" width="143" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.56900096619155371" green="0.2333314476068071" blue="0.82963966836734693" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -281,7 +70,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b1U-5x-xkc">
-                                        <rect key="frame" x="15" y="294" width="138" height="103"/>
+                                        <rect key="frame" x="11" y="289" width="143" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -294,7 +83,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8EF-1M-Lwa">
-                                        <rect key="frame" x="15" y="170" width="138" height="103"/>
+                                        <rect key="frame" x="11" y="165" width="143" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.68869579079999999" green="0.33286846710000001" blue="0.2954397091" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -319,7 +108,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="obStart:" destination="2" eventType="touchUpInside" id="BkS-V9-92V"/>
                                             <action selector="obStart:" destination="30E-7n-RTb" eventType="touchUpInside" id="ETt-Lt-ZAH"/>
                                             <action selector="obStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="pSk-ps-VRV"/>
                                         </connections>
@@ -337,7 +125,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="obStart:" destination="2" eventType="touchUpInside" id="9yP-0c-dKq"/>
                                             <action selector="tbStart:" destination="30E-7n-RTb" eventType="touchUpInside" id="5RP-Io-VZW"/>
                                             <action selector="tbStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="d0u-Ts-osi"/>
                                         </connections>
@@ -350,10 +137,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1:55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="t6o-TP-TjU" userLabel="OB Timer">
-                                        <rect key="frame" x="180" y="88" width="110" height="32"/>
+                                        <rect key="frame" x="180" y="86" width="110" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.30803810570000001" green="0.4903860699" blue="0.83262914539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.66844706629999995" green="0.66844706629999995" blue="0.66844706629999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Our Blue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="TGz-aL-PMB" userLabel="OB Timer">
@@ -364,21 +151,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="BdT-Fr-XEi" userLabel="OB Timer">
-                                        <rect key="frame" x="20" y="124" width="22" height="24"/>
+                                        <rect key="frame" x="19" y="90" width="22" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wCX-Vo-Adx" userLabel="OB Timer">
-                                        <rect key="frame" x="125" y="121" width="22" height="27"/>
+                                        <rect key="frame" x="125" y="88" width="22" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="P3W-Nb-3eo" userLabel="OB Timer">
-                                        <rect key="frame" x="279" y="121" width="22" height="27"/>
+                                        <rect key="frame" x="278" y="88" width="22" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
@@ -394,22 +181,22 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OURS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="NWb-I1-yaZ" userLabel="OB Timer">
                                         <rect key="frame" x="26" y="12" width="110" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OPPONENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="5PZ-R1-vDH" userLabel="OB Timer">
                                         <rect key="frame" x="180" y="12" width="114" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1:55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xdg-jw-Gb2" userLabel="OB Timer">
-                                        <rect key="frame" x="27" y="88" width="110" height="32"/>
+                                        <rect key="frame" x="27" y="86" width="110" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.30803810571947371" green="0.49038606989516703" blue="0.83262914540816324" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.66844706632653061" green="0.66844706632653061" blue="0.66844706632653061" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Yvb-Tg-cRj">
@@ -425,7 +212,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="obStart:" destination="2" eventType="touchUpInside" id="RVO-9K-wn2"/>
                                             <action selector="orStart:" destination="30E-7n-RTb" eventType="touchUpInside" id="ARw-JJ-xag"/>
                                             <action selector="orStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="cud-hg-qR4"/>
                                         </connections>
@@ -438,10 +224,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1:55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ejq-S9-CUP" userLabel="OB Timer">
-                                        <rect key="frame" x="27" y="209" width="110" height="32"/>
+                                        <rect key="frame" x="27" y="207" width="110" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.30803810570000001" green="0.4903860699" blue="0.83262914539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.66844706629999995" green="0.66844706629999995" blue="0.66844706629999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mhc-dN-bez">
@@ -457,7 +243,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="obStart:" destination="2" eventType="touchUpInside" id="HHJ-9m-WeE"/>
                                             <action selector="trStart:" destination="30E-7n-RTb" eventType="touchUpInside" id="6jW-fg-eXa"/>
                                             <action selector="trStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="ikr-CK-iZ4"/>
                                         </connections>
@@ -470,10 +255,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1:55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="bmt-ZR-PIw" userLabel="OB Timer">
-                                        <rect key="frame" x="181" y="209" width="110" height="32"/>
+                                        <rect key="frame" x="181" y="207" width="110" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.30803810570000001" green="0.4903860699" blue="0.83262914539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.66844706629999995" green="0.66844706629999995" blue="0.66844706629999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mnf-yG-MDL">
@@ -491,7 +276,6 @@
                                         <connections>
                                             <action selector="dragonStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="lmB-kh-Z5y"/>
                                             <action selector="dragonStart:" destination="30E-7n-RTb" eventType="touchUpInside" id="tIe-gq-Bzx"/>
-                                            <action selector="obStart:" destination="2" eventType="touchUpInside" id="FuB-bf-uma"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dragon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="rFa-bF-ZIY" userLabel="OB Timer">
@@ -502,10 +286,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1:55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="EbO-wD-75G" userLabel="OB Timer">
-                                        <rect key="frame" x="27" y="333" width="110" height="32"/>
+                                        <rect key="frame" x="27" y="331" width="110" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.30803810570000001" green="0.4903860699" blue="0.83262914539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.66844706629999995" green="0.66844706629999995" blue="0.66844706629999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sDw-DR-vhA">
@@ -523,11 +307,10 @@
                                         <connections>
                                             <action selector="baronStart:" destination="30E-7n-RTb" eventType="touchUpInside" id="Hm9-ay-nf7"/>
                                             <action selector="baronStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="TEE-6W-ij8"/>
-                                            <action selector="obStart:" destination="2" eventType="touchUpInside" id="WpS-xz-n5a"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jQs-67-GcO">
-                                        <rect key="frame" x="168" y="286" width="70" height="115"/>
+                                        <rect key="frame" x="165" y="286" width="70" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -559,7 +342,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xVT-zz-J5D">
-                                        <rect key="frame" x="169" y="163" width="70" height="115"/>
+                                        <rect key="frame" x="165" y="163" width="70" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -591,7 +374,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wj3-7c-M6R">
-                                        <rect key="frame" x="169" y="41" width="70" height="115"/>
+                                        <rect key="frame" x="164" y="41" width="70" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -607,7 +390,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kI9-5N-7EC">
-                                        <rect key="frame" x="239" y="41" width="70" height="115"/>
+                                        <rect key="frame" x="237" y="41" width="70" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -623,7 +406,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S1n-2F-Lus">
-                                        <rect key="frame" x="16" y="41" width="70" height="115"/>
+                                        <rect key="frame" x="11" y="40" width="70" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -639,7 +422,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PkT-Cx-Eha">
-                                        <rect key="frame" x="86" y="41" width="70" height="115"/>
+                                        <rect key="frame" x="87" y="41" width="70" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -655,7 +438,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="r79-fq-7QU">
-                                        <rect key="frame" x="15" y="163" width="70" height="115"/>
+                                        <rect key="frame" x="10" y="163" width="70" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -687,7 +470,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kBb-rz-ZdJ">
-                                        <rect key="frame" x="15" y="286" width="70" height="115"/>
+                                        <rect key="frame" x="12" y="286" width="70" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -726,10 +509,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1:55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="b01-9u-pMs" userLabel="OB Timer">
-                                        <rect key="frame" x="179" y="333" width="110" height="32"/>
+                                        <rect key="frame" x="179" y="331" width="110" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.30474556580000001" green="0.47796500060000002" blue="0.89606584820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.66844706629999995" green="0.66844706629999995" blue="0.66844706629999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <toolbar autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Lwb-0N-724">
@@ -753,68 +536,104 @@
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </toolbar>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ODD-ON-WT0" userLabel="OB Timer">
-                                        <rect key="frame" x="125" y="245" width="22" height="27"/>
+                                        <rect key="frame" x="125" y="210" width="22" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ojQ-GX-kws" userLabel="OB Timer">
-                                        <rect key="frame" x="20" y="248" width="22" height="24"/>
+                                        <rect key="frame" x="19" y="212" width="22" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="XQd-Gr-OsC" userLabel="OB Timer">
-                                        <rect key="frame" x="278" y="245" width="22" height="27"/>
+                                        <rect key="frame" x="278" y="210" width="22" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="mHY-JI-rfo" userLabel="OB Timer">
-                                        <rect key="frame" x="173" y="248" width="22" height="24"/>
+                                        <rect key="frame" x="173" y="212" width="22" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jZy-7Y-c9R" userLabel="OB Timer">
-                                        <rect key="frame" x="276" y="368" width="22" height="27"/>
+                                        <rect key="frame" x="278" y="334" width="22" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="myA-6C-IQW" userLabel="OB Timer">
-                                        <rect key="frame" x="171" y="371" width="22" height="24"/>
+                                        <rect key="frame" x="173" y="336" width="22" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="4A5-Yj-EAF" userLabel="OB Timer">
-                                        <rect key="frame" x="125" y="368" width="22" height="27"/>
+                                        <rect key="frame" x="125" y="334" width="22" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="nKk-TD-Xfa" userLabel="OB Timer">
-                                        <rect key="frame" x="20" y="371" width="22" height="24"/>
+                                        <rect key="frame" x="19" y="336" width="22" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ewR-Cb-p5l" userLabel="OB Timer">
-                                        <rect key="frame" x="176" y="124" width="22" height="24"/>
+                                        <rect key="frame" x="173" y="90" width="22" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="0.57947958669999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="0.5" id="cbL-6A-pWc">
+                                        <rect key="frame" x="178" y="378" width="116" height="11"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="trackTintColor" red="0.2153230736" green="0.3444802938" blue="0.39033988120000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="0.5" id="Xyo-zR-i7E">
+                                        <rect key="frame" x="24" y="378" width="116" height="11"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="trackTintColor" red="0.2153230736" green="0.3444802938" blue="0.39033988120000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="0.5" id="Lpm-xj-VDO">
+                                        <rect key="frame" x="23" y="256" width="116" height="11"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="trackTintColor" red="0.2153230736" green="0.3444802938" blue="0.39033988120000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="0.5" id="ZLv-qL-ZJy">
+                                        <rect key="frame" x="178" y="256" width="116" height="11"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="trackTintColor" red="0.2153230736" green="0.3444802938" blue="0.39033988120000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="0.5" id="nzr-JJ-Wbm">
+                                        <rect key="frame" x="177" y="131" width="116" height="11"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="trackTintColor" red="0.2153230736" green="0.3444802938" blue="0.39033988120000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="0.5" id="J6A-sH-btb">
+                                        <rect key="frame" x="24" y="131" width="116" height="11"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="trackTintColor" red="0.2153230736" green="0.3444802938" blue="0.39033988120000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.24557557397959184" green="0.24557557397959184" blue="0.24557557397959184" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -822,23 +641,29 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="baronBar" destination="cbL-6A-pWc" id="umK-nk-93p"/>
                         <outlet property="baronBorder" destination="Xnh-j8-run" id="tp4-RI-glh"/>
                         <outlet property="baronButtonUpdate" destination="sDw-DR-vhA" id="GVH-LO-mCq"/>
                         <outlet property="baronTimer" destination="b01-9u-pMs" id="PGQ-Mq-MiZ"/>
+                        <outlet property="dragonBar" destination="Xyo-zR-i7E" id="26K-8V-ZoP"/>
                         <outlet property="dragonBorder" destination="b1U-5x-xkc" id="Ceo-NF-CFB"/>
                         <outlet property="dragonButtonUpdate" destination="Mnf-yG-MDL" id="Gpc-Ld-HWJ"/>
                         <outlet property="dragonTimer" destination="EbO-wD-75G" id="to3-dE-abn"/>
                         <outlet property="endButtonUpdate" destination="isp-tJ-eM8" id="qXV-PV-JUz"/>
+                        <outlet property="obBar" destination="J6A-sH-btb" id="THB-ZJ-uV8"/>
                         <outlet property="obBorder" destination="JRv-bD-cVo" id="j7G-Bf-BVV"/>
                         <outlet property="obButtonUpdate" destination="Ixw-TM-SLB" id="f9b-9P-xgd"/>
                         <outlet property="obTimer" destination="xdg-jw-Gb2" id="A8a-Kk-rUJ"/>
+                        <outlet property="orBar" destination="Lpm-xj-VDO" id="ba9-WQ-t16"/>
                         <outlet property="orBorder" destination="8EF-1M-Lwa" id="RWb-xd-Tgt"/>
                         <outlet property="orButtonUpdate" destination="Yvb-Tg-cRj" id="evj-Gn-8GL"/>
                         <outlet property="orTimer" destination="ejq-S9-CUP" id="41m-iG-X94"/>
                         <outlet property="startButtonUpdate" destination="eKU-gf-7J3" id="t3i-dM-Q3B"/>
+                        <outlet property="tbBar" destination="nzr-JJ-Wbm" id="Y3T-JE-EAX"/>
                         <outlet property="tbBorder" destination="Zjy-U2-b4o" id="Rl9-5s-DYZ"/>
                         <outlet property="tbButtonUpdate" destination="Xzq-H8-y4Y" id="lOL-g7-ju4"/>
                         <outlet property="tbTimer" destination="t6o-TP-TjU" id="pa8-oD-oZl"/>
+                        <outlet property="trBar" destination="ZLv-qL-ZJy" id="ouk-Eg-We3"/>
                         <outlet property="trBorder" destination="hEL-YV-VhS" id="BjG-Lh-4I4"/>
                         <outlet property="trButtonUpdate" destination="Mhc-dN-bez" id="wIf-86-EEq"/>
                         <outlet property="trTimer" destination="bmt-ZR-PIw" id="XVQ-mU-JqL"/>
@@ -846,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIa-1z-xOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91" y="227"/>
+            <point key="canvasLocation" x="-303" y="-344"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="V0h-YV-fYb">
@@ -869,7 +694,6 @@
                                 </state>
                                 <connections>
                                     <action selector="startGame:" destination="fB1-Vw-su2" eventType="touchUpInside" id="ViZ-Tp-Gvi"/>
-                                    <action selector="startGame:" destination="2" eventType="touchUpInside" id="g6H-PD-bE9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LnT-Fq-DHv">
@@ -885,7 +709,6 @@
                                 </state>
                                 <connections>
                                     <action selector="obStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="n32-bk-gUO"/>
-                                    <action selector="obStart:" destination="2" eventType="touchUpInside" id="u8o-O9-RQF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LrY-9i-Vqq">
@@ -900,7 +723,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="obStart:" destination="2" eventType="touchUpInside" id="kkj-K8-nAN"/>
                                     <action selector="tbStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="1vh-fk-x78"/>
                                 </connections>
                             </button>
@@ -952,7 +774,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="obStart:" destination="2" eventType="touchUpInside" id="fNb-nb-L0c"/>
                                     <action selector="orStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="Mqv-DR-fWj"/>
                                 </connections>
                             </button>
@@ -986,7 +807,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="obStart:" destination="2" eventType="touchUpInside" id="hIz-O1-Y8b"/>
                                     <action selector="trStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="otf-r3-tLL"/>
                                 </connections>
                             </button>
@@ -1021,7 +841,6 @@
                                 </state>
                                 <connections>
                                     <action selector="dragonStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="xdd-sq-1fC"/>
-                                    <action selector="obStart:" destination="2" eventType="touchUpInside" id="beh-Gc-VVq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dragon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1Th-LR-yik" userLabel="OB Timer">
@@ -1055,7 +874,6 @@
                                 </state>
                                 <connections>
                                     <action selector="baronStart:" destination="fB1-Vw-su2" eventType="touchUpInside" id="hZG-WF-rVO"/>
-                                    <action selector="obStart:" destination="2" eventType="touchUpInside" id="U68-25-TNR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Baron" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Y0r-Qt-6Bk" userLabel="OB Timer">
@@ -1088,7 +906,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="endGame:" destination="2" eventType="touchUpInside" id="2AL-zY-7It"/>
                                     <action selector="endGame:" destination="fB1-Vw-su2" eventType="touchUpInside" id="Re9-5R-dL2"/>
                                 </connections>
                             </button>
@@ -1114,7 +931,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fdm-82-eQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91" y="-344"/>
+            <point key="canvasLocation" x="-303" y="229"/>
         </scene>
     </scenes>
     <classes>

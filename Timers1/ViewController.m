@@ -3,6 +3,7 @@
 //  Timers1
 //
 //  Created by Robert Monahon on 12/16/12.
+//  Update by Cyrus Dukart on 06/03/13
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -156,7 +157,7 @@
     //if(dragonBar.progress > 0.75) {
     //    dragonBar.progressTintColor = [UIColor redColor];
     //} else {
-    //    dragonBar.progressTintColor = [UIColor blueColor];
+    //    dragonBar.progressTintColor = [UIColor darkGrayColor];
     //}
     
 }
